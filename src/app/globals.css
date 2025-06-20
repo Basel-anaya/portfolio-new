@@ -1,0 +1,1161 @@
+@import "tailwindcss";
+
+/* ===== RESPONSIVE SPACING SYSTEM ===== */
+:root {
+  /* Container Spacing */
+  --container-padding-mobile: 1rem;    /* 16px */
+  --container-padding-tablet: 1.5rem;  /* 24px */
+  --container-padding-desktop: 2rem;   /* 32px */
+  
+  /* Section Spacing */
+  --section-padding-y-mobile: 3rem;    /* 48px */
+  --section-padding-y-tablet: 4rem;    /* 64px */
+  --section-padding-y-desktop: 5rem;   /* 80px */
+  
+  /* Hero Section Spacing */
+  --hero-padding-top-mobile: 6rem;     /* 96px */
+  --hero-padding-top-tablet: 8rem;     /* 128px */
+  --hero-padding-top-desktop: 10rem;   /* 160px */
+  
+  --hero-padding-bottom-mobile: 3rem;  /* 48px */
+  --hero-padding-bottom-tablet: 4rem;  /* 64px */
+  --hero-padding-bottom-desktop: 5rem; /* 80px */
+  
+  /* Card Spacing */
+  --card-padding-mobile: 1.5rem;       /* 24px */
+  --card-padding-tablet: 2rem;         /* 32px */
+  --card-padding-desktop: 2.5rem;      /* 40px */
+  
+  --card-gap-mobile: 1rem;             /* 16px */
+  --card-gap-tablet: 1.5rem;           /* 24px */
+  --card-gap-desktop: 2rem;            /* 32px */
+  
+  /* Content Spacing */
+  --content-gap-mobile: 1rem;          /* 16px */
+  --content-gap-tablet: 1.5rem;        /* 24px */
+  --content-gap-desktop: 2rem;         /* 32px */
+  
+  /* Text Spacing */
+  --text-gap-mobile: 0.75rem;          /* 12px */
+  --text-gap-tablet: 1rem;             /* 16px */
+  --text-gap-desktop: 1.25rem;         /* 20px */
+  
+  /* Button Spacing */
+  --button-padding-x-mobile: 1rem;     /* 16px */
+  --button-padding-x-tablet: 1.5rem;   /* 24px */
+  --button-padding-x-desktop: 2rem;    /* 32px */
+  
+  --button-padding-y-mobile: 0.75rem;  /* 12px */
+  --button-padding-y-tablet: 1rem;     /* 16px */
+  --button-padding-y-desktop: 1rem;    /* 16px */
+  
+  /* Grid Gaps */
+  --grid-gap-mobile: 1rem;             /* 16px */
+  --grid-gap-tablet: 1.5rem;           /* 24px */
+  --grid-gap-desktop: 2rem;            /* 32px */
+  
+  /* Header/Navigation */
+  --nav-height-mobile: 4rem;           /* 64px */
+  --nav-height-desktop: 5rem;          /* 80px */
+  
+  /* Max Widths */
+  --max-width-content: 72rem;          /* 1152px */
+  --max-width-text: 48rem;             /* 768px */
+  --max-width-form: 32rem;             /* 512px */
+}
+
+/* ===== RESPONSIVE SPACING UTILITIES ===== */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: var(--container-padding-tablet);
+    --section-padding-y: var(--section-padding-y-tablet);
+    --hero-padding-top: var(--hero-padding-top-tablet);
+    --hero-padding-bottom: var(--hero-padding-bottom-tablet);
+    --card-padding: var(--card-padding-tablet);
+    --card-gap: var(--card-gap-tablet);
+    --content-gap: var(--content-gap-tablet);
+    --text-gap: var(--text-gap-tablet);
+    --button-padding-x: var(--button-padding-x-tablet);
+    --button-padding-y: var(--button-padding-y-tablet);
+    --grid-gap: var(--grid-gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: var(--container-padding-desktop);
+    --section-padding-y: var(--section-padding-y-desktop);
+    --hero-padding-top: var(--hero-padding-top-desktop);
+    --hero-padding-bottom: var(--hero-padding-bottom-desktop);
+    --card-padding: var(--card-padding-desktop);
+    --card-gap: var(--card-gap-desktop);
+    --content-gap: var(--content-gap-desktop);
+    --text-gap: var(--text-gap-desktop);
+    --button-padding-x: var(--button-padding-x-desktop);
+    --button-padding-y: var(--button-padding-y-desktop);
+    --grid-gap: var(--grid-gap-desktop);
+  }
+}
+
+/* Default mobile values */
+:root {
+  --container-padding: var(--container-padding-mobile);
+  --section-padding-y: var(--section-padding-y-mobile);
+  --hero-padding-top: var(--hero-padding-top-mobile);
+  --hero-padding-bottom: var(--hero-padding-bottom-mobile);
+  --card-padding: var(--card-padding-mobile);
+  --card-gap: var(--card-gap-mobile);
+  --content-gap: var(--content-gap-mobile);
+  --text-gap: var(--text-gap-mobile);
+  --button-padding-x: var(--button-padding-x-mobile);
+  --button-padding-y: var(--button-padding-y-mobile);
+  --grid-gap: var(--grid-gap-mobile);
+}
+
+/* ===== UTILITY CLASSES FOR CONSISTENT SPACING ===== */
+.container-padding {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section-spacing {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.hero-spacing {
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
+}
+
+.card-padding {
+  padding: var(--card-padding);
+}
+
+.card-gap {
+  gap: var(--card-gap);
+}
+
+.content-gap {
+  gap: var(--content-gap);
+}
+
+.text-gap {
+  gap: var(--text-gap);
+}
+
+.button-padding {
+  padding: var(--button-padding-y) var(--button-padding-x);
+}
+
+.grid-gap {
+  gap: var(--grid-gap);
+}
+
+/* ===== EXISTING STYLES ===== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* Prevent horizontal overflow globally */
+* {
+  box-sizing: border-box !important;
+}
+
+/* Ensure no elements cause horizontal overflow */
+body *:not(html):not(body) {
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Ensure containers don't overflow */
+.container {
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  overflow-x: hidden !important;
+}
+
+.max-w-4xl {
+  max-width: 56rem !important;
+}
+
+.max-w-3xl {
+  max-width: 48rem !important;
+}
+
+.max-w-2xl {
+  max-width: 42rem !important;
+}
+
+.max-w-xl {
+  max-width: 36rem !important;
+}
+
+.max-w-lg {
+  max-width: 32rem !important;
+}
+
+/* Force dark theme aggressively */
+html {
+  color-scheme: dark !important;
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+  /* Remove scrolling from html */
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  height: 100% !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* Account for fixed navigation */
+}
+
+html * {
+  color-scheme: dark !important;
+}
+
+body {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+  font-family: var(--font-sans), Arial, sans-serif;
+  /* Let body handle all scrolling */
+  height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Override any system color scheme preferences */
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: dark !important;
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+  }
+  
+  body {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px) !important;
+  }
+  
+  /* Force all text to be white/light colors */
+  * {
+    color: inherit !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+  }
+  
+  p {
+    color: #e5e7eb !important;
+  }
+  
+  span {
+    color: inherit !important;
+  }
+  
+  /* Force SVG and icon colors in light mode systems */
+  svg {
+    color: currentColor !important;
+    fill: currentColor !important;
+  }
+  
+  svg path {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+  
+  /* Override any automatic icon color inversions */
+  .text-gray-300 svg,
+  .text-gray-400 svg,
+  .text-gray-600 svg,
+  .text-white svg {
+    color: inherit !important;
+    fill: currentColor !important;
+  }
+}
+
+/* Force text colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+p {
+  color: #e5e7eb !important;
+}
+
+/* Force SVG and icon colors */
+svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+}
+
+svg path {
+  fill: currentColor !important;
+}
+
+svg circle {
+  fill: currentColor !important;
+}
+
+svg rect {
+  fill: currentColor !important;
+}
+
+/* Ensure icons inherit text color */
+.text-gray-300 svg,
+.text-gray-400 svg,
+.text-gray-600 svg,
+.text-white svg {
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+/* Override Tailwind's text color classes to ensure they work in forced dark mode */
+.text-foreground {
+  color: #ffffff !important;
+}
+
+.text-gray-800 {
+  color: #e5e7eb !important;
+}
+
+.text-gray-600 {
+  color: #d1d5db !important;
+}
+
+.text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-black {
+  color: #ffffff !important;
+}
+
+/* Dark theme specific overrides */
+.dark .text-gray-800 {
+  color: #e5e7eb !important;
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+.dark .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Force fill colors for specific elements */
+.dark svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+}
+
+.dark svg path {
+  fill: currentColor !important;
+}
+
+/* Override any browser-specific icon color inversions */
+@media (prefers-color-scheme: light) {
+  /* Prevent browser from inverting colors */
+  img, svg, video {
+    filter: none !important;
+  }
+  
+  /* Force navigation icons to be visible */
+  nav svg {
+    color: #d1d5db !important;
+    fill: currentColor !important;
+  }
+  
+  /* Force button icons */
+  button svg {
+    color: inherit !important;
+    fill: currentColor !important;
+  }
+  
+  /* Force link icons */
+  a svg {
+    color: inherit !important;
+    fill: currentColor !important;
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Animations for Home Page Sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) rotate(5deg);
+  }
+  70% {
+    transform: scale(0.95) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-red {
+  background: rgba(220, 38, 38, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* Chrome Skills Section Styling */
+.chrome-section {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.chrome-icon {
+  background: linear-gradient(135deg, #c0c0c0, #e8e8e8, #a8a8a8);
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 
+    0 4px 15px rgba(192, 192, 192, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.chrome-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: chrome-shine 3s infinite;
+}
+
+@keyframes chrome-shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Oval Skill Container */
+.skill-oval {
+  position: relative;
+  width: 140px;
+  height: 100px;
+  margin: 1rem;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-oval:hover {
+  transform: translateY(-8px) rotateX(15deg) rotateY(5deg) scale(1.05);
+}
+
+.skill-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Chrome 3D effect */
+.skill-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Animated shine effect */
+.skill-inner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.skill-oval:hover .skill-inner::after {
+  opacity: 1;
+  animation: skill-shine 1.5s ease-in-out;
+}
+
+@keyframes skill-shine {
+  0% {
+    transform: rotate(45deg) translateX(-200%) translateY(-200%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(200%) translateY(200%);
+  }
+}
+
+/* Logo container */
+.logo-container {
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.skill-oval:hover .logo-container {
+  transform: scale(1.1) rotateY(10deg);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* Skill name styling */
+.skill-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.skill-oval:hover .skill-name {
+  color: #fbbf24;
+  transform: translateY(-2px);
+  text-shadow: 0 4px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Enhanced hover effects with chrome reflection */
+.skill-oval:hover .skill-inner {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(0, 0, 0, 0.05) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(251, 191, 36, 0.3),
+    0 0 30px rgba(251, 191, 36, 0.2);
+  border: 2px solid rgba(251, 191, 36, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-oval {
+    width: 120px;
+    height: 85px;
+    margin: 0.5rem;
+  }
+  
+  .skill-name {
+    font-size: 0.75rem;
+  }
+  
+  .logo-container svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  /* Mobile-specific timeline adjustments */
+  .timeline-item {
+    transform: translateY(20px) scale(0.95) !important;
+  }
+  
+  .timeline-item.animate-in {
+    transform: translateY(0) scale(1) !important;
+  }
+
+  /* Mobile hero section improvements */
+  .hero-image {
+    animation: none; /* Disable floating animation on mobile for better performance */
+  }
+
+  /* Mobile text improvements */
+  .text-3xl {
+    line-height: 1.2;
+  }
+
+  /* Mobile button improvements */
+  .btn-glow {
+    touch-action: manipulation; /* Better touch response */
+  }
+}
+
+@media (max-width: 640px) {
+  .skill-oval {
+    width: 100px;
+    height: 75px;
+  }
+  
+  .logo-container svg,
+  .logo-container div {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.7rem;
+  }
+
+  /* Extra small mobile adjustments */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Improve mobile spacing */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Mobile timeline content improvements */
+  .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Mobile service cards */
+  .stagger-item {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Mobile menu specific styles */
+@media (max-width: 768px) {
+  /* Prevent body scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: none !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent scrolling on html element too */
+  html:has(body.menu-open) {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-nav-link {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+  }
+
+  /* Mobile glassmorphism adjustments */
+  .glass,
+  .glass-dark {
+    backdrop-filter: blur(8px); /* Reduce blur for better mobile performance */
+  }
+
+  /* Ensure mobile menu panel stays within bounds */
+  .mobile-menu-panel {
+    max-width: calc(100vw - 2rem);
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu-panel.open {
+    transform: translateX(0);
+  }
+
+  /* Prevent horizontal overflow on mobile */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Mobile viewport fixes */
+  .mobile-safe {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Additional iOS Safari fixes */
+  body.menu-open {
+    -webkit-overflow-scrolling: auto !important;
+  }
+
+  /* Prevent elastic scrolling on iOS */
+  .mobile-menu-panel {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .stagger-item:hover,
+  .timeline-item:hover .timeline-content,
+  .blog-post:hover,
+  .service-card:hover::before {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Simplify animations for touch devices */
+  .hero-image {
+    animation: none;
+  }
+
+  .newsletter-star {
+    animation: none;
+  }
+}
+
+/* High DPI mobile displays */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+  /* Optimize for retina mobile displays */
+  .timeline-icon,
+  .chrome-icon {
+    transform: translateZ(0); /* Force hardware acceleration */
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .pt-24 {
+    padding-top: 4rem;
+  }
+
+  .hero-image {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* Additional chrome effect animations */
+@keyframes chrome-glow {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      inset 0 2px 0 rgba(255, 255, 255, 0.3),
+      0 0 0 2px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.skill-oval:hover .skill-inner {
+  animation: chrome-glow 2s ease-in-out infinite;
+}
+
+/* 3D Floating Element - Static Display */
+.floating-3d {
+  /* Enhanced visual effects */
+  filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.1)) 
+          drop-shadow(0 5px 15px rgba(220, 38, 38, 0.2));
+  transition: all 0.3s ease;
+}
+
+.floating-3d img {
+  border-radius: 20px;
+}
+
+/* Dot gradient background - Dark theme only (CSS fallback) */
+.dot-gradient-bg {
+  background-color: #000000 !important;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px) !important;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dot-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3), transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%) !important;
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+/* ===== ENHANCED SCROLL STYLES ===== */
+
+/* Use default browser scrollbar */
+
+/* Enhanced scroll snap for sections */
+main {
+  scroll-snap-type: y proximity;
+  /* Prevent main from creating its own scrollbar */
+  overflow: visible;
+  height: auto;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Ensure no other elements create scrollbars */
+.container,
+.max-w-4xl,
+.max-w-6xl,
+.max-w-7xl {
+  overflow: visible !important;
+}
+
+/* Smooth momentum scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Enhanced scroll animations */
+@keyframes smoothFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) rotateY(-15deg);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px) rotateY(15deg);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes smoothZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateZ(-2deg);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateZ(0deg);
+    filter: blur(0);
+  }
+}
+
+/* Enhanced scroll-triggered animations */
+.enhanced-scroll-fade {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  filter: blur(4px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.enhanced-scroll-fade.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.enhanced-scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-80px) rotateY(-15deg);
+  filter: blur(4px);
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.enhanced-scroll-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+  filter: blur(0);
+}
+
+.enhanced-scroll-slide-right {
+  opacity: 0;
+  transform: translateX(80px) rotateY(15deg);
+  filter: blur(4px);
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.enhanced-scroll-slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+  filter: blur(0);
+}
+
+.enhanced-scroll-zoom {
+  opacity: 0;
+  transform: scale(0.8) rotateZ(-2deg);
+  filter: blur(6px);
+  transition: all 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity, filter;
+}
+
+.enhanced-scroll-zoom.animate-in {
+  opacity: 1;
+  transform: scale(1) rotateZ(0deg);
+  filter: blur(0);
+}
+
+/* Staggered animation delays for multiple elements */
+.stagger-delay-1 { transition-delay: 0.1s; }
+.stagger-delay-2 { transition-delay: 0.2s; }
+.stagger-delay-3 { transition-delay: 0.3s; }
+.stagger-delay-4 { transition-delay: 0.4s; }
+.stagger-delay-5 { transition-delay: 0.5s; }
+.stagger-delay-6 { transition-delay: 0.6s; }
+
+/* Parallax scroll effect */
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  z-index: 9999;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced hover effects for scrollable content */
+.scroll-enhanced:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll reveal text animation */
+.scroll-text-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-text-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Character-by-character text animation */
+.scroll-text-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px) rotateX(90deg);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-text-char.animate-in {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .enhanced-scroll-fade,
+  .enhanced-scroll-slide-left,
+  .enhanced-scroll-slide-right,
+  .enhanced-scroll-zoom,
+  .scroll-text-reveal,
+  .scroll-text-char {
+    animation: none;
+    transition: opacity 0.3s ease;
+    transform: none;
+    filter: none;
+  }
+  
+  .enhanced-scroll-fade.animate-in,
+  .enhanced-scroll-slide-left.animate-in,
+  .enhanced-scroll-slide-right.animate-in,
+  .enhanced-scroll-zoom.animate-in,
+  .scroll-text-reveal.animate-in,
+  .scroll-text-char.animate-in {
+    opacity: 1;
+    transform: none;
+  }
+}
