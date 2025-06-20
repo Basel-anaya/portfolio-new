@@ -362,29 +362,106 @@ export default function Home() {
             {/* Timeline line - Hidden on mobile */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-600"></div>
             
-            <div className="space-y-8 md:space-y-12">
+            {/* Mobile Timeline */}
+            <div className="md:hidden space-y-6">
+              {/* Mobile Timeline Line */}
+              <div className="relative">
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-600"></div>
+                
+                {/* Experience Item 1 - Mobile */}
+                <div className="relative flex items-start gap-4 mb-8">
+                  <div className="flex-shrink-0 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 shadow-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">Bachelor Graduate</h3>
+                    <p className="text-base font-bold text-gray-200 mb-1">University of Jordan</p>
+                    <p className="text-sm text-gray-300 mb-3">Amman, Jordan</p>
+                    <p className="text-sm text-gray-300 mb-3">
+                      Officially graduated with a bachelor's degree in Artificial Intelligence at the University of Jordan.
+                    </p>
+                    <span className="text-xs text-gray-400 font-medium">Oct 2020 - July 2024</span>
+                  </div>
+                </div>
+
+                {/* Experience Item 2 - Mobile */}
+                <div className="relative flex items-start gap-4 mb-8">
+                  <div className="flex-shrink-0 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 shadow-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">ML Engineer Intern</h3>
+                    <p className="text-base font-bold text-gray-200 mb-1">Mashroona</p>
+                    <p className="text-sm text-gray-300 mb-3">Internship • Amman, Jordan • On-site</p>
+                    <p className="text-sm text-gray-300 mb-3">
+                      As an ML Engineer, I have played a crucial role in designing, developing, and deploying AI-powered systems that deliver customized and efficient technology solutions to our clients.
+                    </p>
+                    <span className="text-xs text-gray-400 font-medium">March 2024 - July 2024 · 5 mos</span>
+                  </div>
+                </div>
+
+                {/* Experience Item 3 - Mobile */}
+                <div className="relative flex items-start gap-4 mb-8">
+                  <div className="flex-shrink-0 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 shadow-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">AI Engineer</h3>
+                    <p className="text-base font-bold text-gray-200 mb-1">Barzan T.S DIG</p>
+                    <p className="text-sm text-gray-300 mb-3">Full-time • Amman, Jordan • On-site</p>
+                    <ul className="text-sm text-gray-300 mb-3 space-y-1">
+                      <li>• Managed the AI Department while also built bleeding-edge AI-powered systems.</li>
+                      <li>• Lead an AI team through developing, evaluating and deploying GenAI applications.</li>
+                    </ul>
+                    <span className="text-xs text-gray-400 font-medium">Nov 2024 - May 2025 · 7 mos</span>
+                  </div>
+                </div>
+
+                {/* Experience Item 4 - Mobile */}
+                <div className="relative flex items-start gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 shadow-lg">
+                    <h3 className="text-lg font-semibold text-white mb-2">AI Engineer</h3>
+                    <p className="text-base font-bold text-gray-200 mb-1">Deriv</p>
+                    <p className="text-sm text-gray-300 mb-3">Full-time • Amman, Jordan • On-site</p>
+                    <ul className="text-sm text-gray-300 mb-3 space-y-1">
+                      <li>• Currently working on agentic AI systems to simplify and accelerate task completion.</li>
+                      <li>• Collaborating with teams from different offices around the globe to augment Deriv with the latest AI solutions.</li>
+                    </ul>
+                    <span className="text-xs text-gray-400 font-medium">May 2025 - Present · 1 mo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Timeline */}
+            <div className="hidden md:block space-y-8 md:space-y-12">
               {/* Experience Item 1 */}
               <div className="relative md:flex md:items-center timeline-item">
                 <div className="md:flex-1 md:pr-8 md:text-right">
-                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 md:p-6 shadow-lg timeline-content">
-                    {/* Mobile Icon - Top Right */}
-                    <div className="md:hidden absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-2 pr-12 md:pr-0">Bachelor Graduate</h3>
-                    <p className="text-base md:text-lg font-bold text-gray-200 mb-1">University of Jordan</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">Amman, Jordan</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 shadow-lg timeline-content">
+                    <h3 className="text-xl font-semibold text-white mb-2">Bachelor Graduate</h3>
+                    <p className="text-lg font-bold text-gray-200 mb-1">University of Jordan</p>
+                    <p className="text-base text-gray-300 mb-4">Amman, Jordan</p>
+                    <p className="text-base text-gray-300 mb-4">
                       Officially graduated with a bachelor's degree in Artificial Intelligence at the University of Jordan.
                     </p>
-                    <span className="text-xs md:text-sm text-gray-400 font-medium">Oct 2020 - July 2024</span>
+                    <span className="text-sm text-gray-400 font-medium">Oct 2020 - July 2024</span>
                   </div>
                 </div>
                 
-                {/* Timeline Icon - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
+                {/* Timeline Icon */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
                   </svg>
@@ -397,28 +474,22 @@ export default function Home() {
               <div className="relative md:flex md:items-center timeline-item">
                 <div className="hidden md:block md:flex-1 md:pr-8"></div>
                 
-                {/* Timeline Icon - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
+                {/* Timeline Icon */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
                   </svg>
                 </div>
                 
                 <div className="md:flex-1 md:pl-8">
-                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 md:p-6 shadow-lg timeline-content">
-                    {/* Mobile Icon - Top Right */}
-                    <div className="md:hidden absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-2 pr-12 md:pr-0">ML Engineer Intern</h3>
-                    <p className="text-base md:text-lg font-bold text-gray-200 mb-1">Mashroona</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">Internship • Amman, Jordan • On-site</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 shadow-lg timeline-content">
+                    <h3 className="text-xl font-semibold text-white mb-2">ML Engineer Intern</h3>
+                    <p className="text-lg font-bold text-gray-200 mb-1">Mashroona</p>
+                    <p className="text-base text-gray-300 mb-4">Internship • Amman, Jordan • On-site</p>
+                    <p className="text-base text-gray-300 mb-4">
                       As an ML Engineer, I have played a crucial role in designing, developing, and deploying AI-powered systems that deliver customized and efficient technology solutions to our clients.
                     </p>
-                    <span className="text-xs md:text-sm text-gray-400 font-medium">March 2024 - July 2024 · 5 mos</span>
+                    <span className="text-sm text-gray-400 font-medium">March 2024 - July 2024 · 5 mos</span>
                   </div>
                 </div>
               </div>
@@ -426,26 +497,20 @@ export default function Home() {
               {/* Experience Item 3 */}
               <div className="relative md:flex md:items-center timeline-item">
                 <div className="md:flex-1 md:pr-8 md:text-right">
-                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 md:p-6 shadow-lg timeline-content">
-                    {/* Mobile Icon - Top Right */}
-                    <div className="md:hidden absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-2 pr-12 md:pr-0">AI Engineer</h3>
-                    <p className="text-base md:text-lg font-bold text-gray-200 mb-1">Barzan T.S DIG</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">Full-time • Amman, Jordan • On-site</p>
-                    <ul className="text-sm md:text-base text-gray-300 mb-3 md:mb-4 md:text-left space-y-1">
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 shadow-lg timeline-content">
+                    <h3 className="text-xl font-semibold text-white mb-2">AI Engineer</h3>
+                    <p className="text-lg font-bold text-gray-200 mb-1">Barzan T.S DIG</p>
+                    <p className="text-base text-gray-300 mb-4">Full-time • Amman, Jordan • On-site</p>
+                    <ul className="text-base text-gray-300 mb-4 space-y-1">
                       <li>• Managed the AI Department while also built bleeding-edge AI-powered systems.</li>
                       <li>• Lead an AI team through developing, evaluating and deploying GenAI applications.</li>
                     </ul>
-                    <span className="text-xs md:text-sm text-gray-400 font-medium">Nov 2024 - May 2025 · 7 mos</span>
+                    <span className="text-sm text-gray-400 font-medium">Nov 2024 - May 2025 · 7 mos</span>
                   </div>
                 </div>
                 
-                {/* Timeline Icon - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
+                {/* Timeline Icon */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
                   </svg>
@@ -458,29 +523,23 @@ export default function Home() {
               <div className="relative md:flex md:items-center timeline-item">
                 <div className="hidden md:block md:flex-1 md:pr-8"></div>
                 
-                {/* Timeline Icon - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
+                {/* Timeline Icon */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg timeline-icon">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
                   </svg>
                 </div>
                 
                 <div className="md:flex-1 md:pl-8">
-                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-4 md:p-6 shadow-lg timeline-content">
-                    {/* Mobile Icon - Top Right */}
-                    <div className="md:hidden absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center shadow-lg">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-white mb-2 pr-12 md:pr-0">AI Engineer</h3>
-                    <p className="text-base md:text-lg font-bold text-gray-200 mb-1">Deriv</p>
-                    <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">Full-time • Amman, Jordan • On-site</p>
-                    <ul className="text-sm md:text-base text-gray-300 mb-3 md:mb-4 space-y-1">
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 shadow-lg timeline-content">
+                    <h3 className="text-xl font-semibold text-white mb-2">AI Engineer</h3>
+                    <p className="text-lg font-bold text-gray-200 mb-1">Deriv</p>
+                    <p className="text-base text-gray-300 mb-4">Full-time • Amman, Jordan • On-site</p>
+                    <ul className="text-base text-gray-300 mb-4 space-y-1">
                       <li>• Currently working on agentic AI systems to simplify and accelerate task completion.</li>
                       <li>• Collaborating with teams from different offices around the globe to augment Deriv with the latest AI solutions.</li>
                     </ul>
-                    <span className="text-xs md:text-sm text-gray-400 font-medium">May 2025 - Present · 1 mo</span>
+                    <span className="text-sm text-gray-400 font-medium">May 2025 - Present · 1 mo</span>
                   </div>
                 </div>
               </div>
@@ -676,7 +735,7 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 All rights reserved. Powered by Next.js
+              © 2025 All rights reserved. Powered by Next.js
             </p>
             <div className="flex items-center space-x-8 mt-4 md:mt-0">
               <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
